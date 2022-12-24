@@ -19,6 +19,15 @@ const addUser = (user) =>{
     ...users,
     user
   ])
+
+}
+
+const deleteUser = (id) =>{
+  console.log(id)
+  console.log(users)
+
+  setUsers(users.filter(user => user.id !== id))
+
 }
   return (
     <div className="container">
@@ -31,7 +40,7 @@ const addUser = (user) =>{
         </div>
         <div className="flex-large">
           <h2>View users</h2>
-          <UserTable users={users}></UserTable>
+          <UserTable users={users} deleteUser={deleteUser}></UserTable>
         </div>
       </div>
     </div>

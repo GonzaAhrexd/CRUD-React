@@ -7,9 +7,11 @@ const UserTable = (props) => {
     <table>
       <thead>
         <tr>
-          <th>Nombre</th>
+          <th>Nombre</th> 
           <th>Nombre de usuario</th>
           <th>Accciones</th>
+
+          
         </tr>
       </thead>
       <tbody>
@@ -20,7 +22,7 @@ const UserTable = (props) => {
           <td>{user.name}</td>
           <td>{user.username}</td>
           <td>
-            <button className="button muted-button">Editar</button>
+            <button className="button muted-button" onClick={() => {props.editRow(user)}}>Editar</button>
             <button className="button muted-button" onClick={() => {props.deleteUser(user.id)}}>Eliminar</button>
           </td>
         </tr>

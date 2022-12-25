@@ -11,7 +11,8 @@ const AddUserForm = (props) =>  {
     }
     return (
         <div> 
-      <h1>Formulario</h1>
+      <h1>Formulario </h1> 
+      
       <form onSubmit={handleSubmit(onSubmit)}>
         <label>Nombre</label>
         <input type="text" name="name" placeholder="Ingresa el nombre" 
